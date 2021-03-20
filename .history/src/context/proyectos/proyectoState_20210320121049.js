@@ -3,7 +3,8 @@ import { FORMULARIO_PROYECTO } from "../../types/Index";
 import proyectoContext from "./proyectoContext";
 import proyectoReducer from "./proyectoReducer";
 
-const ProyectoState = (props) => {
+const Proyecto;
+State = (props) => {
   const initialState = {
     formulario: false,
   };

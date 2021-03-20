@@ -30,17 +30,12 @@ const NuevoProyecto = () => {
 
     //Reiniciar el form
   };
-
-  //MOSTRAR EL FORMULARIO
-  const onClickFormulario = () => {
-    mostrarFormulario();
-  };
   return (
     <Fragment>
       <button
         className="btn btn-block btn-primario"
         type="button"
-        onClick={onClickFormulario}>
+        onClick={() => mostrarFormulario()}>
         Nuevo Proyecto
       </button>
       {formulario ? (
