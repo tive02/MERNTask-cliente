@@ -24,12 +24,7 @@ const ProyectoState = (props) => {
   };
 
   //OBtener los Proyectos
-  const obtenerProyectos = () => {
-    dispatch({
-      type: OBTENER_PROYECTOS,
-      payload: proyectos,
-    });
-  };
+  const obtenerPoyectos = (proyectos) => {};
 
   return (
     <proyectoContext.Provider
@@ -37,7 +32,6 @@ const ProyectoState = (props) => {
         proyectos: state.proyectos,
         formulario: state.formulario,
         mostrarFormulario,
-        obtenerProyectos,
       }}>
       {props.children}
     </proyectoContext.Provider>

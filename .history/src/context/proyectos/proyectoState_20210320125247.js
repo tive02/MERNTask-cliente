@@ -1,5 +1,5 @@
 import React, { useReducer } from "react";
-import { FORMULARIO_PROYECTO, OBTENER_PROYECTOS } from "../../types/Index";
+import { FORMULARIO_PROYECTO } from "../../types/Index";
 import proyectoContext from "./proyectoContext";
 import proyectoReducer from "./proyectoReducer";
 
@@ -24,12 +24,7 @@ const ProyectoState = (props) => {
   };
 
   //OBtener los Proyectos
-  const obtenerProyectos = () => {
-    dispatch({
-      type: OBTENER_PROYECTOS,
-      payload: proyectos,
-    });
-  };
+  const obtenerPoyectos = () => {};
 
   return (
     <proyectoContext.Provider
@@ -37,7 +32,6 @@ const ProyectoState = (props) => {
         proyectos: state.proyectos,
         formulario: state.formulario,
         mostrarFormulario,
-        obtenerProyectos,
       }}>
       {props.children}
     </proyectoContext.Provider>

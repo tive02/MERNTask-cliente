@@ -9,7 +9,7 @@ const ListadoProyectos = () => {
 
   useEffect(() => {
     obtenerProyectos();
-  }, []);
+  }, [input]);
   //Revisar si proyectos tiene contenido
   if (proyectos.length === 0) return null;
 
