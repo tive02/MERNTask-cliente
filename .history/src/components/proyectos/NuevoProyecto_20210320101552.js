@@ -35,23 +35,21 @@ const NuevoProyecto = () => {
       <button className="btn btn-block btn-primario" type="button">
         Nuevo Proyecto
       </button>
-      {formulario ? (
-        <form className="formulario-nuevo-proyecto" onSubmit={onSubmitProyecto}>
-          <input
-            type="text"
-            className="input-text"
-            placeholder="Nombre Proyecto"
-            name="nombre"
-            onChange={onChangeProyecto}
-            value={nombre}
-          />
-          <input
-            type="submit"
-            className="btn btn-block btn-primario"
-            value="Agregar Proyecto"
-          />
-        </form>
-      ) : null}
+      <form className="formulario-nuevo-proyecto" onSubmit={onSubmitProyecto}>
+        <input
+          type="text"
+          className="input-text"
+          placeholder="Nombre Proyecto"
+          name="nombre"
+          onChange={onChangeProyecto}
+          value={nombre}
+        />
+        <input
+          type="submit"
+          className="btn btn-block btn-primario"
+          value="Agregar Proyecto"
+        />
+      </form>
     </Fragment>
   );
 };
