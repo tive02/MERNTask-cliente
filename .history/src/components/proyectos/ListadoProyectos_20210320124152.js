@@ -3,10 +3,9 @@ import proyectoContext from "../../context/proyectos/proyectoContext";
 import Proyecto from "./Proyecto";
 
 const ListadoProyectos = () => {
-  //Extraer proyectos de State inicial
+  //Obtener el state del formulario
   const proyectosContext = useContext(proyectoContext);
   const { proyectos } = proyectosContext;
-  //Revisar si proyectos tiene contenido
   if (proyectos.length === 0) return null;
 
   return (
