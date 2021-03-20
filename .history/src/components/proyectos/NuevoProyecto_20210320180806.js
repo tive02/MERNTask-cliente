@@ -33,9 +33,7 @@ const NuevoProyecto = () => {
     agregarProyecto(proyecto);
 
     //Reiniciar el form
-    guardarProyecto({
-      nombre: "",
-    });
+    guardarProyecto("");
   };
 
   //MOSTRAR EL FORMULARIO

@@ -21,7 +21,6 @@ export default (state, action) => {
       return {
         ...state,
         proyectos: [...state.proyectos, action.payload],
-        formulario: false,
       };
     default:
       return state;

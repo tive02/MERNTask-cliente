@@ -26,16 +26,10 @@ const NuevoProyecto = () => {
   const onSubmitProyecto = (e) => {
     e.preventDefault();
     //Validar el proyecto
-    if (nombre === "") {
-      return;
-    }
+
     //Agregar al State
-    agregarProyecto(proyecto);
 
     //Reiniciar el form
-    guardarProyecto({
-      nombre: "",
-    });
   };
 
   //MOSTRAR EL FORMULARIO

@@ -1,5 +1,5 @@
 import React, { useReducer } from "react";
-import { v4 as uuidv4 } from "uuid";
+import uuid from "uuid";
 import {
   FORMULARIO_PROYECTO,
   OBTENER_PROYECTOS,
@@ -37,12 +37,7 @@ const ProyectoState = (props) => {
   };
   //Agregar Nuevo Proyecto
   const agregarProyecto = (proyecto) => {
-    proyecto.id = uuidv4();
-    //Insertar el proyecto en el state
-    dispatch({
-      type: AGREGAR_PROYECTOS,
-      payload: proyecto,
-    });
+    proyecto.id = uuid.v4();
   };
 
   return (
@@ -52,7 +47,6 @@ const ProyectoState = (props) => {
         formulario: state.formulario,
         mostrarFormulario,
         obtenerProyectos,
-        agregarProyecto,
       }}>
       {props.children}
     </proyectoContext.Provider>
