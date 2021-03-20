@@ -19,11 +19,6 @@ const NuevoProyecto = () => {
   //cuando el usuario envia el proyecto
   const onSubmitProyecto = (e) => {
     e.preventDefault();
-    //Validar el proyecto
-
-    //Agregar al State
-
-    //Reiniciar el form
   };
   return (
     <Fragment>
