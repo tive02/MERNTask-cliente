@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-const Login = () => {
+const NuevaCuenta = () => {
   //State Para Iniciar Sesión
   const [usuario, guardarUsuario] = useState({
     email: "",
@@ -23,7 +23,7 @@ const Login = () => {
   return (
     <div className="form-usuario">
       <div className="contenedor-form sombra-dark">
-        <h1>Iniciar Sesión</h1>
+        <h1>Crea una Cuenta</h1>
         <form onSubmit={onSubmit}>
           <div className="campo-form">
             <label htmlFor="email">Email </label>
@@ -63,4 +63,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default NuevaCuenta;

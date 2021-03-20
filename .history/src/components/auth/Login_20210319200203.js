@@ -1,37 +1,22 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 
 const Login = () => {
-  //State Para Iniciar Sesión
-  const [usuario, guardarUsuario] = useState({
+  const [usuarios, guardarUsuarios] = useState({
     email: "",
     password: "",
   });
-  //Extraer los valores de usuarios
-  const { email, password } = usuario;
-
-  const onChange = (e) => {
-    guardarUsuario({
-      ...usuario,
-      [e.target.name]: e.target.value,
-    });
-  };
-  const onSubmit = (e) => {
-    e.preventDefault();
-  };
-
+  const onChange = () => {};
   return (
     <div className="form-usuario">
       <div className="contenedor-form sombra-dark">
         <h1>Iniciar Sesión</h1>
-        <form onSubmit={onSubmit}>
+        <form>
           <div className="campo-form">
             <label htmlFor="email">Email </label>
             <input
               type="email"
               id="email"
               name="email"
-              value={email}
               placeholder="Tu Email"
               onChange={onChange}
             />
@@ -42,7 +27,6 @@ const Login = () => {
               type="password"
               id="password"
               name="password"
-              value={password}
               placeholder="Tu Password"
               onChange={onChange}
             />
@@ -55,9 +39,6 @@ const Login = () => {
             />
           </div>
         </form>
-        <Link to={"/nueva-cuenta"} className="enlace-cuenta">
-          Obtener Cuenta
-        </Link>
       </div>
     </div>
   );

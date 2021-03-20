@@ -15,11 +15,10 @@ const Login = () => {
       ...usuario,
       [e.target.name]: e.target.value,
     });
+    const onSubmit = (e) => {
+      e.preventDefault();
+    };
   };
-  const onSubmit = (e) => {
-    e.preventDefault();
-  };
-
   return (
     <div className="form-usuario">
       <div className="contenedor-form sombra-dark">
