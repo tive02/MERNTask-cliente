@@ -16,12 +16,8 @@ const Tarea = ({ tarea }) => {
         )}
       </div>
       <div className="acciones">
-        <button type="button" className="btn btn-primario">
-          Editar
-        </button>
-        <button type="button" className="btn btn-secundario">
-          Eliminar
-        </button>
+        <button>Editar</button>
+        <button>Editar</button>
       </div>
     </li>
   );
