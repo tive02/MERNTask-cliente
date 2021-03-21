@@ -4,14 +4,11 @@ import proyectoContext from "../../context/proyectos/proyectoContext";
 const Proyecto = ({ proyecto }) => {
   //Obtener el State Del proyecto
   const proyectosContext = useContext(proyectoContext);
-  const { proyectoActual } = proyectosContext;
+  const {} = proyectosContext;
 
   return (
     <li>
-      <button
-        type="button"
-        className="btn btn-black"
-        onClick={() => proyectoActual(proyecto.id)}>
+      <button type="button" className="btn btn-black">
         {proyecto.nombre}
       </button>
     </li>

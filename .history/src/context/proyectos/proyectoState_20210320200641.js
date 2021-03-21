@@ -57,10 +57,9 @@ const ProyectoState = (props) => {
   };
 
   //Selecciona el PRoyecto que el usuario dio click
-  const proyectoActual = (proyectoId) => {
+  const proyectoActual = (proyecto) => {
     dispatch({
       type: PROYECTO_ACTUAL,
-      payload: proyectoId,
     });
   };
   return (
@@ -74,7 +73,6 @@ const ProyectoState = (props) => {
         obtenerProyectos,
         agregarProyecto,
         mostrarError,
-        proyectoActual,
       }}>
       {props.children}
     </proyectoContext.Provider>

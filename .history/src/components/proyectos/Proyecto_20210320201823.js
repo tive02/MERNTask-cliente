@@ -8,10 +8,7 @@ const Proyecto = ({ proyecto }) => {
 
   return (
     <li>
-      <button
-        type="button"
-        className="btn btn-black"
-        onClick={() => proyectoActual(proyecto.id)}>
+      <button type="button" className="btn btn-black">
         {proyecto.nombre}
       </button>
     </li>

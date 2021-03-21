@@ -34,9 +34,7 @@ export default (state, action) => {
     case PROYECTO_ACTUAL:
       return {
         ...state,
-        proyecto: state.proyectos.filter(
-          (proyecto) => proyecto.id === action.payload
-        ),
+        errorformulario: true,
       };
     default:
       return state;
