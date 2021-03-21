@@ -6,7 +6,7 @@ const FormTarea = () => {
   const proyectosContext = useContext(proyectoContext);
   const { proyecto } = proyectosContext;
   //Si no hay un proyecto seleccionado
-  if (!proyecto) return null;
+  if (!proyecto) return <h2>Selecciona un Proyecto</h2>;
   return (
     <div className="formulario">
       <form>
