@@ -84,7 +84,6 @@ const ProyectoState = (props) => {
         agregarProyecto,
         mostrarError,
         proyectoActual,
-        eliminarProyecto,
       }}>
       {props.children}
     </proyectoContext.Provider>

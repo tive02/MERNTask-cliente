@@ -9,7 +9,7 @@ const ListadoTarea = () => {
   //Si no hay un proyecto seleccionado
   if (!proyecto) return <h2>Selecciona un Proyecto</h2>;
 
-  //Array destructuring para extraer el proyecto actual
+  //Array detructuring para extraer el proyecto actual
   const [proyectoActual] = proyecto;
   const tareasProyecto = [
     { nombre: "Elegir Plataforma", estado: true },

@@ -43,9 +43,8 @@ export default (state, action) => {
       return {
         ...state,
         proyectos: state.proyectos.filter(
-          (proyecto) => proyecto.id !== action.payload
+          (proyecto) => proyecto.id === action.payload
         ),
-        proyecto: null,
       };
     default:
       return state;

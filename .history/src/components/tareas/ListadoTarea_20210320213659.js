@@ -9,7 +9,7 @@ const ListadoTarea = () => {
   //Si no hay un proyecto seleccionado
   if (!proyecto) return <h2>Selecciona un Proyecto</h2>;
 
-  //Array destructuring para extraer el proyecto actual
+  //Array detructuring para extraer el proyecto actual
   const [proyectoActual] = proyecto;
   const tareasProyecto = [
     { nombre: "Elegir Plataforma", estado: true },
@@ -18,10 +18,6 @@ const ListadoTarea = () => {
     { nombre: "Elegir Hosting", estado: true },
   ];
 
-  //Funcion para eliminar un proyecto
-  const onClickEliminar = () => {
-    eliminarProyecto(proyectoActual.id);
-  };
   return (
     <Fragment>
       <h2> Proyecto: {proyectoActual.nombre}</h2>
@@ -34,10 +30,7 @@ const ListadoTarea = () => {
           tareasProyecto.map((tarea) => <Tarea tarea={tarea} />)
         )}
       </ul>
-      <button
-        type="button"
-        className="btn btn-eliminar"
-        onClick={onClickEliminar}>
+      <button type="button" className="btn btn-eliminar">
         Eliminar Proyecto &times;
       </button>
     </Fragment>
