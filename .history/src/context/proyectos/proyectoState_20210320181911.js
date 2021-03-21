@@ -58,11 +58,10 @@ const ProyectoState = (props) => {
       value={{
         proyectos: state.proyectos,
         formulario: state.formulario,
-        errorformulario: state.errorformulario,
+        errorformulario: state.errorformulario
         mostrarFormulario,
         obtenerProyectos,
         agregarProyecto,
-        mostrarError,
       }}>
       {props.children}
     </proyectoContext.Provider>

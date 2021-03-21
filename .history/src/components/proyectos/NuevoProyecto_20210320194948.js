@@ -75,7 +75,7 @@ const NuevoProyecto = () => {
         </form>
       ) : null}
       {errorformulario ? (
-        <p className="mensaje error">El Nombre del Proyecto es Obligatorio</p>
+        <p className="">El Nombre del Proyecto es OBligatorio</p>
       ) : null}
     </Fragment>
   );

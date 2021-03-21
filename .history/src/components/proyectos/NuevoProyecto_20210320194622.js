@@ -33,7 +33,6 @@ const NuevoProyecto = () => {
     e.preventDefault();
     //Validar el proyecto
     if (nombre === "") {
-      mostrarError();
       return;
     }
     //Agregar al State
@@ -75,7 +74,7 @@ const NuevoProyecto = () => {
         </form>
       ) : null}
       {errorformulario ? (
-        <p className="mensaje error">El Nombre del Proyecto es Obligatorio</p>
+        <p className="mensaje error">El Nombre del Proyecto es OBligatorio</p>
       ) : null}
     </Fragment>
   );

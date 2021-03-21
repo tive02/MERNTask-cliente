@@ -23,9 +23,8 @@ export default (state, action) => {
         ...state,
         proyectos: [...state.proyectos, action.payload],
         formulario: false,
-        errorformulario: false,
       };
-    case VALIDAR_FORMULARIO:
+    case AGREGAR_PROYECTOS:
       return {
         ...state,
         errorformulario: true,

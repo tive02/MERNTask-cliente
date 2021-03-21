@@ -62,7 +62,6 @@ const ProyectoState = (props) => {
         mostrarFormulario,
         obtenerProyectos,
         agregarProyecto,
-        mostrarError,
       }}>
       {props.children}
     </proyectoContext.Provider>
