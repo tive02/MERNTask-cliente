@@ -16,8 +16,8 @@ function App() {
             <Route exact path="/nueva-cuenta" component={NuevaCuenta} />
             <Route exact path="/proyectos" component={Proyectos} />
           </Switch>
-        </Router>
-      </TareaState>
+        </TareaState>
+      </Router>
     </ProyectoState>
   );
 }
