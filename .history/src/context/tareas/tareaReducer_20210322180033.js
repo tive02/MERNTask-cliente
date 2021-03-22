@@ -28,7 +28,6 @@ export default (state, action) => {
     case ELIMINAR_TAREA:
       return {
         ...state,
-        tareas: state.tareas.filter((tarea) => tarea.id !== action.payload),
       };
     default:
       return state;

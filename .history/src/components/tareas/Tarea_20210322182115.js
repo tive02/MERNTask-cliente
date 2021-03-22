@@ -17,7 +17,6 @@ const Tarea = ({ tarea }) => {
   //Funcion que se ejecuta cuando ek usuario presiona el btn de eliminar tarea
   const tareaEliminar = (id) => {
     eliminarTarea(id);
-    obtenerTareas(proyectoActual.id);
   };
   return (
     <li className="tarea sombra">

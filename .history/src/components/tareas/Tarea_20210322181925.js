@@ -11,13 +11,9 @@ const Tarea = ({ tarea }) => {
   const tareasContext = useContext(TareaContext);
   const { eliminarTarea, obtenerTareas } = tareasContext;
 
-  //extraer el proyecto
-  const [proyectoActual] = proyecto;
-
   //Funcion que se ejecuta cuando ek usuario presiona el btn de eliminar tarea
   const tareaEliminar = (id) => {
     eliminarTarea(id);
-    obtenerTareas(proyectoActual.id);
   };
   return (
     <li className="tarea sombra">
