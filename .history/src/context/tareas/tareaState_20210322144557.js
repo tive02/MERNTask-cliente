@@ -43,11 +43,8 @@ const TareaState = (props) => {
     });
   };
 
-  const agregarTarea = (tarea) => {
-    dispatch({
-      type: AGREGAR_TAREA,
-      payload: tarea,
-    });
+  const agregarTarea = () => {
+    dispatch({ type: AGREGAR_TAREA });
   };
 
   return (
@@ -56,7 +53,6 @@ const TareaState = (props) => {
         tareas: state.tareas,
         tareasproyecto: state.tareasproyecto,
         obtenerTareas,
-        agregarTarea,
       }}>
       {props.children}
     </TareaContext.Provider>

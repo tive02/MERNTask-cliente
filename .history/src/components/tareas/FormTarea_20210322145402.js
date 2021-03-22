@@ -14,11 +14,6 @@ const FormTarea = () => {
 
   const onSubmitTarea = (e) => {
     e.preventDefault();
-    //Validar
-    //PAsar la Validacion
-    //Agregar la nueva Tarea al state de tarea
-
-    //Reiniar el Form
   };
   return (
     <div className="formulario">

@@ -56,7 +56,6 @@ const TareaState = (props) => {
         tareas: state.tareas,
         tareasproyecto: state.tareasproyecto,
         obtenerTareas,
-        agregarTarea,
       }}>
       {props.children}
     </TareaContext.Provider>
