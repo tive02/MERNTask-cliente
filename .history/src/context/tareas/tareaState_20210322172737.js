@@ -51,7 +51,7 @@ const TareaState = (props) => {
     });
   };
   //Error tarea
-  const validarTarea = () => {
+  const errorTarea = () => {
     dispatch({
       type: ERROR_TAREA,
     });
@@ -65,7 +65,6 @@ const TareaState = (props) => {
         errortarea: state.errortarea,
         obtenerTareas,
         agregarTarea,
-        validarTarea,
       }}>
       {props.children}
     </TareaContext.Provider>

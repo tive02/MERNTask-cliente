@@ -1,5 +1,5 @@
 import React, { useReducer } from "react";
-import { AGREGAR_TAREA, TAREAS_PROYECTO, ERROR_TAREA } from "../../types/Index";
+import { AGREGAR_TAREA, TAREAS_PROYECTO } from "../../types/Index";
 import TareaContext from "./tareaContext";
 import TareaReducer from "./tareaReducer";
 
@@ -43,17 +43,11 @@ const TareaState = (props) => {
       payload: proyectoId,
     });
   };
-  //Agregar las tareas
+
   const agregarTarea = (tarea) => {
     dispatch({
       type: AGREGAR_TAREA,
       payload: tarea,
-    });
-  };
-  //Error tarea
-  const validarTarea = () => {
-    dispatch({
-      type: ERROR_TAREA,
     });
   };
 
@@ -62,10 +56,9 @@ const TareaState = (props) => {
       value={{
         tareas: state.tareas,
         tareasproyecto: state.tareasproyecto,
-        errortarea: state.errortarea,
+        errortarea: state.errortarea
         obtenerTareas,
         agregarTarea,
-        validarTarea,
       }}>
       {props.children}
     </TareaContext.Provider>

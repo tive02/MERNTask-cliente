@@ -1,4 +1,4 @@
-import { AGREGAR_TAREA, TAREAS_PROYECTO, ERROR_TAREA } from "../../types/Index";
+import { AGREGAR_TAREA, TAREAS_PROYECTO } from "../../types/Index";
 
 export default (state, action) => {
   switch (action.type) {
@@ -13,9 +13,8 @@ export default (state, action) => {
       return {
         ...state,
         tareas: [...state.tareas, action.payload],
-        errortarea: false,
       };
-    case ERROR_TAREA:
+    case AGREGAR_TAREA:
       return {
         ...state,
         errortarea: true,

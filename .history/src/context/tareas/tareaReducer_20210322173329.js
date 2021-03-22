@@ -13,7 +13,6 @@ export default (state, action) => {
       return {
         ...state,
         tareas: [...state.tareas, action.payload],
-        errortarea: false,
       };
     case ERROR_TAREA:
       return {

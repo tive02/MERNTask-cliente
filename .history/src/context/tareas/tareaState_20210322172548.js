@@ -1,5 +1,5 @@
 import React, { useReducer } from "react";
-import { AGREGAR_TAREA, TAREAS_PROYECTO, ERROR_TAREA } from "../../types/Index";
+import { AGREGAR_TAREA, TAREAS_PROYECTO } from "../../types/Index";
 import TareaContext from "./tareaContext";
 import TareaReducer from "./tareaReducer";
 
@@ -51,10 +51,8 @@ const TareaState = (props) => {
     });
   };
   //Error tarea
-  const validarTarea = () => {
-    dispatch({
-      type: ERROR_TAREA,
-    });
+  const errorTarea = () => {
+    dispatch;
   };
 
   return (
@@ -65,7 +63,6 @@ const TareaState = (props) => {
         errortarea: state.errortarea,
         obtenerTareas,
         agregarTarea,
-        validarTarea,
       }}>
       {props.children}
     </TareaContext.Provider>
