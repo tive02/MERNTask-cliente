@@ -8,7 +8,7 @@ const FormTarea = () => {
   const { proyecto } = proyectosContext;
   //Estraer
   const tareasContext = useContext(TareaContext);
-  const { agregarTarea } = tareasContext;
+  const {} = tareasContext;
 
   //State del formulario
   const [tarea, guardarTarea] = useState({
@@ -19,9 +19,7 @@ const FormTarea = () => {
 
   //Si no hay un proyecto seleccionado
   if (!proyecto) return null;
-
-  //Array destructuring para extraer el proyecto actual
-  const [proyectoActual] = proyecto;
+  valores;
 
   //Leer los valores del Formulario
   const handleChange = (e) => {
@@ -36,9 +34,7 @@ const FormTarea = () => {
     //Validar
     //PAsar la Validacion
     //Agregar la nueva Tarea al state de tarea
-    tarea.proyectoId = proyectoActual.id;
-    tarea.estado = false;
-    agregarTarea(tarea);
+
     //Reiniar el Form
   };
   return (

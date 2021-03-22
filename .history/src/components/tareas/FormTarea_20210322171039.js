@@ -20,9 +20,6 @@ const FormTarea = () => {
   //Si no hay un proyecto seleccionado
   if (!proyecto) return null;
 
-  //Array destructuring para extraer el proyecto actual
-  const [proyectoActual] = proyecto;
-
   //Leer los valores del Formulario
   const handleChange = (e) => {
     guardarTarea({
@@ -36,9 +33,7 @@ const FormTarea = () => {
     //Validar
     //PAsar la Validacion
     //Agregar la nueva Tarea al state de tarea
-    tarea.proyectoId = proyectoActual.id;
-    tarea.estado = false;
-    agregarTarea(tarea);
+
     //Reiniar el Form
   };
   return (
