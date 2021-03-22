@@ -1,6 +1,6 @@
 import React, { useReducer } from "react";
 import { TAREAS_PROYECTO } from "../../types/Index";
-import TareaContext from "./tareaContext";
+import Tareacontext from "./tareaContext";
 import TareaReducer from "./tareaReducer";
 
 const TareaState = (props) => {
@@ -21,8 +21,6 @@ const TareaState = (props) => {
       { nombre: "Elegir Hosting Fontend", estado: true, proyectoId: 1 },
       { nombre: "Elegir Hosting Backend", estado: true, proyectoId: 2 },
       { nombre: "Elegir Plataforma de diseño", estado: true, proyectoId: 3 },
-      { nombre: "Elegir Plataforma de diseño", estado: true, proyectoId: 3 },
-      { nombre: "Otra actividad", estado: true, proyectoId: 4 },
       {
         nombre: "Elegir Plataforma de A/B Testing",
         estado: true,
@@ -44,14 +42,9 @@ const TareaState = (props) => {
   };
 
   return (
-    <TareaContext.Provider
-      value={{
-        tareas: state.tareas,
-        tareasproyecto: state.tareasproyecto,
-        obtenerTareas,
-      }}>
+    <Tareacontext.Provider value={{ tareas: state.tareas, obtenerTareas }}>
       {props.children}
-    </TareaContext.Provider>
+    </Tareacontext.Provider>
   );
 };
 

@@ -1,6 +1,6 @@
 import React, { Fragment, useContext } from "react";
 import proyectoContext from "../../context/proyectos/proyectoContext";
-import TareaContext from "../../context/tareas/tareaContext";
+import tareacontext from "../../context/tareas/tareaContext";
 import Tarea from "./Tarea";
 
 const ListadoTarea = () => {
@@ -9,7 +9,7 @@ const ListadoTarea = () => {
   const { proyecto, eliminarProyecto } = proyectosContext;
 
   //Extraer Proyectos del state inicial
-  const tareasContext = useContext(TareaContext);
+  const tareasContext = useContext(tareacontext);
   const { tareasproyecto } = tareasContext;
 
   //Si no hay un proyecto seleccionado
