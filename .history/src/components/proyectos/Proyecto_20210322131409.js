@@ -7,13 +7,12 @@ const Proyecto = ({ proyecto }) => {
   const proyectosContext = useContext(proyectoContext);
   const { proyectoActual } = proyectosContext;
   //Obtener el state de las tareas
-  const tareasContext = useContext(tareacontext);
-  const { obtenerTareas } = tareasContext;
+  const tareaContext = useContext(tareacontext);
+  const {} = tareaContext;
 
   //Funcion para agregar el proyecto actual
   const seleccionarProyecto = (id) => {
     proyectoActual(id); //Fijar un proyecto Actual
-    obtenerTareas(id); // Filtrar las tareas cuando se ejecuten
   };
 
   return (

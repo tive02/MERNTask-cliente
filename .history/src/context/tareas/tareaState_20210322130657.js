@@ -41,7 +41,7 @@ const TareaState = (props) => {
   };
 
   return (
-    <Tareacontext.Provider value={{ tareas: state.tareas, obtenerTareas }}>
+    <Tareacontext.Provider value={{ tareas: state.tareas }}>
       {props.children}
     </Tareacontext.Provider>
   );

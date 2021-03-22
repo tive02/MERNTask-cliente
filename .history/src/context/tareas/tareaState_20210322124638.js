@@ -1,7 +1,6 @@
 import React, { useReducer } from "react";
-import { TAREAS_PROYECTO } from "../../types/Index";
 import Tareacontext from "./tareaContext";
-import TareaReducer from "./tareaReducer";
+import tareaReducer from "./tareaReducer";
 
 const TareaState = (props) => {
   const initialState = {
@@ -29,22 +28,9 @@ const TareaState = (props) => {
     ],
   };
   //crear el Dispatch y el
-  const [state, dispatch] = useReducer(TareaReducer, initialState);
+  const [state, dispatch] = useReducer(tareaReducer, initialState);
 
-  //Crear las funciones
-  //obtener las tareas de un proyecto
-  const obtenerTareas = (proyectoId) => {
-    dispatch({
-      type: TAREAS_PROYECTO,
-      payload: proyectoId,
-    });
-  };
-
-  return (
-    <Tareacontext.Provider value={{ tareas: state.tareas, obtenerTareas }}>
-      {props.children}
-    </Tareacontext.Provider>
-  );
+  return <Tareacontext.Provider>{props.children}</Tareacontext.Provider>;
 };
 
 export default TareaState;
