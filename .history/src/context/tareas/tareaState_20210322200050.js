@@ -3,8 +3,7 @@ import {
   AGREGAR_TAREA,
   TAREAS_PROYECTO,
   ERROR_TAREA,
-  ELIMINAR_TAREA,
-  ESTADO_TAREA,
+  ELIMINAR_TAREA,, ESTADO_TAREA
 } from "../../types/Index";
 import TareaContext from "./tareaContext";
 import TareaReducer from "./tareaReducer";
@@ -66,12 +65,12 @@ const TareaState = (props) => {
     });
   };
   //Cambia el Estado de la tarea.
-  const cambiarEstadoTarea = (tarea) => {
+  const cambiarEstadoTarea = tarea=>{
     dispatch({
       type: ESTADO_TAREA,
-      payload: tarea,
-    });
-  };
+      payload:tarea
+    })
+  }
 
   return (
     <TareaContext.Provider

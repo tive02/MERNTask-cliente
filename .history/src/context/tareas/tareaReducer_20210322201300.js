@@ -32,12 +32,10 @@ export default (state, action) => {
         tareas: state.tareas.filter((tarea) => tarea.id !== action.payload),
       };
     case ESTADO_TAREA:
-      return {
-        ...state,
-        tareas: state.tareasproyecto.map((tarea) =>
-          tarea.id === action.payload.id ? action.payload : tarea
-        ),
-      };
+      return{
+        ...state
+        tareas: state.tareasproyecto.map(tarea =>(tarea.id===action.payload.id) ? action.payload :tarea)
+      }
     default:
       return state;
   }

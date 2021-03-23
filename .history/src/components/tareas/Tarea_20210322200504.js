@@ -21,14 +21,7 @@ const Tarea = ({ tarea }) => {
   };
 
   //Funcion para cambiar el estado de las tareas
-  const cambiarEstado = (tarea) => {
-    if (tarea.estado) {
-      tarea.estado = false;
-    } else {
-      tarea.estado = true;
-    }
-    cambiarEstadoTarea(tarea);
-  };
+  const cambiarEstado = (tarea) => {};
   return (
     <li className="tarea sombra">
       <p>{tarea.nombre}</p>

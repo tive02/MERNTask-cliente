@@ -27,7 +27,6 @@ const Tarea = ({ tarea }) => {
     } else {
       tarea.estado = true;
     }
-    cambiarEstadoTarea(tarea);
   };
   return (
     <li className="tarea sombra">

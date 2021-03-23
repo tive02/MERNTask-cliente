@@ -21,30 +21,17 @@ const Tarea = ({ tarea }) => {
   };
 
   //Funcion para cambiar el estado de las tareas
-  const cambiarEstado = (tarea) => {
-    if (tarea.estado) {
-      tarea.estado = false;
-    } else {
-      tarea.estado = true;
-    }
-    cambiarEstadoTarea(tarea);
-  };
+  const cambiarEstado = (tarea) => {};
   return (
     <li className="tarea sombra">
       <p>{tarea.nombre}</p>
       <div className="estado">
         {tarea.estado ? (
-          <button
-            type="button"
-            className="completo"
-            onClick={() => cambiarEstado(tarea)}>
+          <button type="button" className="completo" onClick={cambiarEstado}>
             Completo
           </button>
         ) : (
-          <button
-            type="button"
-            className="incompleto"
-            onClick={() => cambiarEstado(tarea)}>
+          <button type="button" className="incompleto" onClick={cambiarEstado}>
             Incompleto
           </button>
         )}

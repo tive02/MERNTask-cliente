@@ -22,12 +22,11 @@ const Tarea = ({ tarea }) => {
 
   //Funcion para cambiar el estado de las tareas
   const cambiarEstado = (tarea) => {
-    if (tarea.estado) {
-      tarea.estado = false;
+    if (tarea) {
+      tarea: false;
     } else {
-      tarea.estado = true;
+      tarea: true;
     }
-    cambiarEstadoTarea(tarea);
   };
   return (
     <li className="tarea sombra">
