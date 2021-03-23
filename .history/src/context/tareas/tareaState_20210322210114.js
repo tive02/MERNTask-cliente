@@ -5,8 +5,7 @@ import {
   ERROR_TAREA,
   ELIMINAR_TAREA,
   ESTADO_TAREA,
-  TAREA_ACTUAL,
-  ACTUALIZAR_TAREA,
+  TAREA_ACTUAL,, ACTUALIZAR_TAREA
 } from "../../types/Index";
 import TareaContext from "./tareaContext";
 import TareaReducer from "./tareaReducer";
@@ -83,12 +82,12 @@ const TareaState = (props) => {
     });
   };
   //Fn para editar o modificar una tarea
-  const actualizarTarea = (tarea) => {
+  const actualizarTarea = tarea=>{
     dispatch({
       type: ACTUALIZAR_TAREA,
-      payload: tarea,
-    });
-  };
+      payload: tarea
+    })
+  }
 
   return (
     <TareaContext.Provider
@@ -103,7 +102,6 @@ const TareaState = (props) => {
         eliminarTarea,
         cambiarEstadoTarea,
         guardarTareaActual,
-        actualizarTarea,
       }}>
       {props.children}
     </TareaContext.Provider>

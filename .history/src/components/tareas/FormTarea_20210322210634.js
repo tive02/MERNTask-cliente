@@ -56,8 +56,7 @@ const FormTarea = () => {
       validarTarea();
       return;
     }
-    //Si es edicion o es nueva tarea
-    if (tareaseleccionada === null) {
+    if (tareaseleccionada !== null) {
       //Agregar la nueva Tarea al state de tarea
       tarea.proyectoId = proyectoActual.id;
       tarea.estado = false;

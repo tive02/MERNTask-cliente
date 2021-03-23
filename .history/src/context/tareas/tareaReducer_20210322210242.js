@@ -37,7 +37,7 @@ export default (state, action) => {
     case ACTUALIZAR_TAREA:
       return {
         ...state,
-        tareas: state.tareas.map((tarea) =>
+        tareas: state.tareasproyecto.map((tarea) =>
           tarea.id === action.payload.id ? action.payload : tarea
         ),
       };

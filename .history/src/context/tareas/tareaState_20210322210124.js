@@ -103,7 +103,6 @@ const TareaState = (props) => {
         eliminarTarea,
         cambiarEstadoTarea,
         guardarTareaActual,
-        actualizarTarea,
       }}>
       {props.children}
     </TareaContext.Provider>
