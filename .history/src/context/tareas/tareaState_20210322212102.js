@@ -51,7 +51,7 @@ const TareaState = (props) => {
   };
   //Agregar las tareas
   const agregarTarea = (tarea) => {
-    tarea.id = uuidv4();
+    id = uuidv4();
     dispatch({
       type: AGREGAR_TAREA,
       payload: tarea,
