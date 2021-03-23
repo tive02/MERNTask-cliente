@@ -42,7 +42,6 @@ export default (state, action) => {
     case TAREA_ACTUAL:
       return {
         ...state,
-        tareaseleccionada: action.payload,
       };
     default:
       return state;

@@ -35,9 +35,7 @@ const Tarea = ({ tarea }) => {
     cambiarEstadoTarea(tarea);
   };
   //Fundio para seleccionar la tarea actual
-  const seleccionarTarea = (tarea) => {
-    guardarTareaActual(tarea);
-  };
+  const seleccionarTarea = (tarea) => {};
   return (
     <li className="tarea sombra">
       <p>{tarea.nombre}</p>

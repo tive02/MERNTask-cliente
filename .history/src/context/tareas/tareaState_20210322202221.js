@@ -4,8 +4,7 @@ import {
   TAREAS_PROYECTO,
   ERROR_TAREA,
   ELIMINAR_TAREA,
-  ESTADO_TAREA,
-  TAREA_ACTUAL,
+  ESTADO_TAREA,, TAREA_ACTUAL
 } from "../../types/Index";
 import TareaContext from "./tareaContext";
 import TareaReducer from "./tareaReducer";
@@ -34,7 +33,6 @@ const TareaState = (props) => {
     ],
     tareasproyecto: null,
     errortarea: false,
-    tareaseleccionada: null,
   };
   //crear el Dispatch y el
   const [state, dispatch] = useReducer(TareaReducer, initialState);
@@ -74,13 +72,13 @@ const TareaState = (props) => {
       payload: tarea,
     });
   };
-  //Extrae una Tarea Actual Para Edicion
-  const guardarTareaActual = (tarea) => {
-    dispatch({
-      type: TAREA_ACTUAL,
-      payload: tarea,
-    });
-  };
+  //Extrae una Tarea Actual Para Edicion 
+const guardarTareaActual=tarea=>{
+  dispatch({
+    type: TAREA_ACTUAL,
+    payload:tarea
+  })
+}
 
   return (
     <TareaContext.Provider
@@ -88,13 +86,12 @@ const TareaState = (props) => {
         tareas: state.tareas,
         tareasproyecto: state.tareasproyecto,
         errortarea: state.errortarea,
-        tareaseleccionada: state.tareaseleccionada,
         obtenerTareas,
         agregarTarea,
         validarTarea,
         eliminarTarea,
         cambiarEstadoTarea,
-        guardarTareaActual,
+        guardarTareaActual
       }}>
       {props.children}
     </TareaContext.Provider>

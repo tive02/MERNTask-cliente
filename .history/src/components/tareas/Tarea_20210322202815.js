@@ -10,6 +10,7 @@ const Tarea = ({ tarea }) => {
   // Context de las tareas
   const tareasContext = useContext(TareaContext);
   const {
+    tareaseleccionada,
     eliminarTarea,
     obtenerTareas,
     cambiarEstadoTarea,

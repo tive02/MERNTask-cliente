@@ -3,8 +3,7 @@ import {
   TAREAS_PROYECTO,
   ERROR_TAREA,
   ELIMINAR_TAREA,
-  ESTADO_TAREA,
-  TAREA_ACTUAL,
+  ESTADO_TAREA,, TAREA_ACTUAL
 } from "../../types/Index";
 
 export default (state, action) => {
@@ -40,10 +39,9 @@ export default (state, action) => {
         ),
       };
     case TAREA_ACTUAL:
-      return {
+      return{
         ...state,
-        tareaseleccionada: action.payload,
-      };
+      }
     default:
       return state;
   }

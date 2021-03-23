@@ -34,7 +34,6 @@ const TareaState = (props) => {
     ],
     tareasproyecto: null,
     errortarea: false,
-    tareaseleccionada: null,
   };
   //crear el Dispatch y el
   const [state, dispatch] = useReducer(TareaReducer, initialState);
@@ -88,7 +87,6 @@ const TareaState = (props) => {
         tareas: state.tareas,
         tareasproyecto: state.tareasproyecto,
         errortarea: state.errortarea,
-        tareaseleccionada: state.tareaseleccionada,
         obtenerTareas,
         agregarTarea,
         validarTarea,

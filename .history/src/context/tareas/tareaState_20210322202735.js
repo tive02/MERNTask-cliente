@@ -88,7 +88,6 @@ const TareaState = (props) => {
         tareas: state.tareas,
         tareasproyecto: state.tareasproyecto,
         errortarea: state.errortarea,
-        tareaseleccionada: state.tareaseleccionada,
         obtenerTareas,
         agregarTarea,
         validarTarea,

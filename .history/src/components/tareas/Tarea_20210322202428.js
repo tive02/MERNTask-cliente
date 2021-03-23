@@ -9,12 +9,7 @@ const Tarea = ({ tarea }) => {
   const { proyecto } = proyectosContext;
   // Context de las tareas
   const tareasContext = useContext(TareaContext);
-  const {
-    eliminarTarea,
-    obtenerTareas,
-    cambiarEstadoTarea,
-    guardarTareaActual,
-  } = tareasContext;
+  const { eliminarTarea, obtenerTareas, cambiarEstadoTarea } = tareasContext;
 
   //extraer el proyecto
   const [proyectoActual] = proyecto;
@@ -33,10 +28,6 @@ const Tarea = ({ tarea }) => {
       tarea.estado = true;
     }
     cambiarEstadoTarea(tarea);
-  };
-  //Fundio para seleccionar la tarea actual
-  const seleccionarTarea = (tarea) => {
-    guardarTareaActual(tarea);
   };
   return (
     <li className="tarea sombra">
