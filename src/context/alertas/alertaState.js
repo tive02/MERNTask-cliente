@@ -18,7 +18,7 @@ const AlertaState = (props) => {
         categoria,
       },
     });
-
+    //Despues de 5 segundos limpiar la alerta
     setTimeout(() => {
       dispatch({
         type: OCULAR_ALERTA,
