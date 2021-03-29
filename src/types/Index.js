@@ -12,3 +12,6 @@ export const ELIMINAR_TAREA = "ELIMINAR_TAREA";
 export const ESTADO_TAREA = "ESTADO_TAREA";
 export const TAREA_ACTUAL = "TAREA_ACTUAL";
 export const ACTUALIZAR_TAREA = "ACTUALIZAR_TAREA";
+//Types de las alertas
+export const MOSTRAR_ALERTA = "MOSTRAR_ALERTA";
+export const OCULAR_ALERTA = "OCULAR_ALERTA";
