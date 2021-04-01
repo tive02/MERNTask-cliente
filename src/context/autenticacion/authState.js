@@ -10,6 +10,7 @@ import {
   LOGIN_ERROR,
   CERRAR_SESION,
 } from "../../types/Index";
+import tokenAuth from "../../config/token";
 
 const AuthState = (props) => {
   const initialState = {
@@ -49,12 +50,18 @@ const AuthState = (props) => {
     const token = localStorage.getItem("token");
     if (token) {
       //Funcion para enviar el token a traves de headers
+      tokenAuth(token);
     }
 
     try {
       const respuesta = await clienteAxios.get("/api/auth");
-      console.log(respuesta);
+      //console.log(respuesta);
+      dispatch({
+        type: OBTENER_USUARIO,
+        payload: respuesta.data,
+      });
     } catch (error) {
+      console.log(error);
       dispatch({
         type: LOGIN_ERROR,
       });

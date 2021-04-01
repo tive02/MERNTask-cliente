@@ -16,10 +16,9 @@ const NuevaCuenta = (props) => {
     if (autenticado) {
       props.history.push("/proyectos");
     }
-    if (mensaje){
-      mostrarAlerta(mensaje.msg, mensaje.categoria)
+    if (mensaje) {
+      mostrarAlerta(mensaje.msg, mensaje.categoria);
     }
-
   }, [mensaje, autenticado, props.history]);
 
   //State Para Iniciar Sesión
