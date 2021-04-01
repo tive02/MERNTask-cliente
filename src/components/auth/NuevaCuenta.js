@@ -17,7 +17,7 @@ const NuevaCuenta = (props) => {
       props.history.push("/proyectos");
     }
     if (mensaje) {
-      mostrarAlerta(mensaje.msg, mensaje.categoria);
+      //mostrarAlerta(mensaje.msg, mensaje.categoria);
     }
   }, [mensaje, autenticado, props.history]);
 
