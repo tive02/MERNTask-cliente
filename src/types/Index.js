@@ -15,3 +15,10 @@ export const ACTUALIZAR_TAREA = "ACTUALIZAR_TAREA";
 //Types de las alertas
 export const MOSTRAR_ALERTA = "MOSTRAR_ALERTA";
 export const OCULAR_ALERTA = "OCULAR_ALERTA";
+//Types para la autenticacion
+export const REGISTRO_EXITOSO = "REGISTRO_EXITOSO";
+export const REGISTRO_ERROR = "REGISTRO_ERROR";
+export const OBTENER_USUARIO = "OBTENER_USUARIO";
+export const LOGIN_EXITOSO = "LOGIN_EXITOSO";
+export const LOGIN_ERROR = "LOGIN_ERROR";
+export const CERRAR_SESION = "CERRA_SESION";
