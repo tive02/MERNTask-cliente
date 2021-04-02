@@ -36,7 +36,7 @@ const proyectoReducer = (state, action) => {
       return {
         ...state,
         proyecto: state.proyectos.filter(
-          (proyecto) => proyecto.id === action.payload
+          (proyecto) => proyecto._id === action.payload
         ),
       };
     case ELIMINAR_PROYECTO:
