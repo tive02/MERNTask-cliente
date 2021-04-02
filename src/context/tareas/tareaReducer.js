@@ -30,7 +30,7 @@ const tareaReducer = (state, action) => {
       return {
         ...state,
         tareasproyecto: state.tareasproyecto.filter(
-          (tarea) => tarea.id !== action.payload
+          (tarea) => tarea._id !== action.payload
         ),
       };
     case ESTADO_TAREA:
