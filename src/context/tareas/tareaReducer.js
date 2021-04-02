@@ -33,12 +33,11 @@ const tareaReducer = (state, action) => {
           (tarea) => tarea._id !== action.payload
         ),
       };
-    case ESTADO_TAREA:
     case ACTUALIZAR_TAREA:
       return {
         ...state,
         tareasproyecto: state.tareasproyecto.map((tarea) =>
-          tarea.id === action.payload.id ? action.payload : tarea
+          tarea._id === action.payload._id ? action.payload : tarea
         ),
         tareaseleccionada: null,
       };
