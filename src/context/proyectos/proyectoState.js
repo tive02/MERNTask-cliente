@@ -10,6 +10,7 @@ import {
 } from "../../types/Index";
 import proyectoContext from "./proyectoContext";
 import proyectoReducer from "./proyectoReducer";
+import clienteAxios from "../../config/axios";
 
 const ProyectoState = (props) => {
   const proyectos = [
@@ -42,13 +43,18 @@ const ProyectoState = (props) => {
     });
   };
   //Agregar Nuevo Proyecto
-  const agregarProyecto = (proyecto) => {
-    proyecto.id = uuidv4();
-    //Insertar el proyecto en el state
-    dispatch({
-      type: AGREGAR_PROYECTOS,
-      payload: proyecto,
-    });
+  const agregarProyecto = async (proyecto) => {
+    try {
+      const resultado = await clienteAxios.post("/api/proyectos", proyecto);
+      console.log(resultado);
+      //Insertar el proyecto en el state
+      dispatch({
+        type: AGREGAR_PROYECTOS,
+        payload: resultado.data,
+      });
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   //VALIDAR EL FORMULARIO
