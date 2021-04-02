@@ -4,6 +4,7 @@ import {
   FORMULARIO_PROYECTO,
   OBTENER_PROYECTOS,
   AGREGAR_PROYECTOS,
+  PROYECTO_ERROR,
   VALIDAR_FORMULARIO,
   PROYECTO_ACTUAL,
   ELIMINAR_PROYECTO,
@@ -18,6 +19,7 @@ const ProyectoState = (props) => {
     formulario: false,
     errorformulario: false,
     proyecto: null,
+    mensaje: null,
   };
   //Dispatch para ejecutar acciones
   const [state, dispatch] = useReducer(proyectoReducer, initialState);
@@ -38,7 +40,14 @@ const ProyectoState = (props) => {
         payload: resultado.data.proyectos,
       });
     } catch (error) {
-      console.log(error);
+      const alerta = {
+        msg: "upss.. el error es nuestro vuelve a intentarlo",
+        categoria: "alerta-error",
+      };
+      dispatch({
+        type: PROYECTO_ERROR,
+        payload: alerta,
+      });
     }
   };
   //Agregar Nuevo Proyecto
@@ -52,7 +61,14 @@ const ProyectoState = (props) => {
         payload: resultado.data,
       });
     } catch (error) {
-      console.log(error);
+      const alerta = {
+        msg: "upss.. el error es nuestro vuelve a intentarlo",
+        categoria: "alerta-error",
+      };
+      dispatch({
+        type: PROYECTO_ERROR,
+        payload: alerta,
+      });
     }
   };
 
@@ -81,7 +97,14 @@ const ProyectoState = (props) => {
         payload: proyectoId,
       });
     } catch (error) {
-      console.log(error);
+      const alerta = {
+        msg: "upss.. el error es nuestro vuelve a intentarlo",
+        categoria: "alerta-error",
+      };
+      dispatch({
+        type: PROYECTO_ERROR,
+        payload: alerta,
+      });
     }
   };
   return (
@@ -91,6 +114,7 @@ const ProyectoState = (props) => {
         formulario: state.formulario,
         errorformulario: state.errorformulario,
         proyecto: state.proyecto,
+        mensaje: state.mensaje,
         mostrarFormulario,
         obtenerProyectos,
         agregarProyecto,
