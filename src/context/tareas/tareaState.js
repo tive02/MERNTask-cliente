@@ -1,5 +1,4 @@
 import React, { useReducer } from "react";
-import { v4 as uuidv4 } from "uuid";
 import {
   AGREGAR_TAREA,
   TAREAS_PROYECTO,
@@ -11,30 +10,11 @@ import {
 } from "../../types/Index";
 import TareaContext from "./tareaContext";
 import TareaReducer from "./tareaReducer";
+import clienteAxios from "../../config/axios";
 
 const TareaState = (props) => {
   const initialState = {
-    tareas: [
-      { id: 1, nombre: "Elegir Plataforma", estado: true, proyectoId: 1 },
-      { id: 2, nombre: "Elegir Plataforma", estado: true, proyectoId: 2 },
-      { id: 3, nombre: "Elegir Plataforma", estado: true, proyectoId: 3 },
-      { id: 4, nombre: "Elegir Plataforma", estado: true, proyectoId: 4 },
-      { id: 5, nombre: "Elegir Colores", estado: false, proyectoId: 1 },
-      { id: 6, nombre: "Elegir Colores", estado: false, proyectoId: 2 },
-      { id: 7, nombre: "Elegir Colores", estado: false, proyectoId: 3 },
-      { id: 8, nombre: "Elegir Colores", estado: false, proyectoId: 4 },
-      { id: 9, nombre: "Elegir  pago", estado: false, proyectoId: 1 },
-      { id: 10, nombre: "Elegir e pago", estado: false, proyectoId: 2 },
-      { id: 11, nombre: "Elegir  pago", estado: false, proyectoId: 3 },
-      { id: 12, nombre: "Elegir  pago", estado: false, proyectoId: 4 },
-      { id: 13, nombre: "ElegirHostingFontend", estado: true, proyectoId: 1 },
-      { id: 14, nombre: "ElegirHostingBackend", estado: true, proyectoId: 2 },
-      { id: 15, nombre: "Elegir diseño", estado: true, proyectoId: 3 },
-      { id: 16, nombre: "Elegir diseño", estado: true, proyectoId: 3 },
-      { id: 17, nombre: "Otra actividad", estado: true, proyectoId: 4 },
-      { id: 18, nombre: "Elegir A/B Testing", estado: true, proyectoId: 4 },
-    ],
-    tareasproyecto: null,
+    tareasproyecto: [],
     errortarea: false,
     tareaseleccionada: null,
   };
@@ -50,12 +30,17 @@ const TareaState = (props) => {
     });
   };
   //Agregar las tareas
-  const agregarTarea = (tarea) => {
-    tarea.id = uuidv4();
-    dispatch({
-      type: AGREGAR_TAREA,
-      payload: tarea,
-    });
+  const agregarTarea = async (tarea) => {
+    try {
+      const resultado = await clienteAxios.post("/api/tareas", tarea);
+      console.log(resultado);
+      dispatch({
+        type: AGREGAR_TAREA,
+        payload: tarea,
+      });
+    } catch (error) {
+      console.log(error);
+    }
   };
   //Error tarea
   const validarTarea = () => {
@@ -95,7 +80,6 @@ const TareaState = (props) => {
   return (
     <TareaContext.Provider
       value={{
-        tareas: state.tareas,
         tareasproyecto: state.tareasproyecto,
         errortarea: state.errortarea,
         tareaseleccionada: state.tareaseleccionada,
