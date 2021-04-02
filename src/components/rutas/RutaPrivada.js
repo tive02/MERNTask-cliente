@@ -8,6 +8,7 @@ const RutaPrivada = ({ component: Component, ...props }) => {
   //Mantener la validacion de usuarios
   useEffect(() => {
     usuarioAutenticado();
+    // eslint-disable-next-line
   }, []);
 
   return (
